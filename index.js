@@ -18,9 +18,21 @@ fs.readFile('./.token', 'utf8', function(err, data)
 		{
 			console.log('Couldn\'t read the .token file. Make sure it exists, it should contains your bot\'s token.');
 		}
-		return 1
+		return 1;
 	}
 	console.log('Trying to log-in...');
 	console.log('Using token: ' + data);
 	client.login(data);
 });
+
+function includesArray(str, arr) //check if the string str contains any element from the array arr
+{
+	for(var i = 0; i < arr.length; i++)
+	{
+		if(arr[i].toLowerCase().includes(str.toLowerCase()))
+		{
+			return true;
+		}
+	}
+	return false;
+}
