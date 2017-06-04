@@ -1,6 +1,6 @@
 module.exports = 
 {
-	doesntlike: 'linux',
+	doesntlike: ['linux'],
 	likes: ['gnu/linux',
 		'gnu / linux',
 		'gnu+linux',

@@ -4,10 +4,28 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 //insert code here
-client.on('ready', () => {
+client.on('ready', () =>
+{
 	console.log('Ready');
 });
-	
+
+client.on('message', message =>
+{
+	if(message.author.id != client.user.id)
+	{
+		if(includesArray(message.cleanContent, copypasta.doesntlike))
+		{
+			if(!includesArray(message.cleanContent, copypasta.likes))
+			{
+				for(var i = 0; i < copypasta.copypasta.length; i++)
+				{
+					message.channel.send(copypasta.copypasta[i]);
+				}
+			}
+		}
+	}
+});
+
 console.log('Reading token file...');
 fs.readFile('./.token', 'utf8', function(err, data)
 {
@@ -29,7 +47,7 @@ function includesArray(str, arr) //check if the string str contains any element 
 {
 	for(var i = 0; i < arr.length; i++)
 	{
-		if(arr[i].toLowerCase().includes(str.toLowerCase()))
+		if(str.toLowerCase().includes(arr[i].toLowerCase()))
 		{
 			return true;
 		}
