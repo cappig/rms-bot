@@ -1,0 +1,22 @@
+{
+  "name": "rms-bot",
+  "version": "1.0.0",
+  "description": "Richard Stallman bot for Discord will remind you to use GNU/Linux and not Linux.",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Technochips/rms-bot.git"
+  },
+  "author": "Technochips",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/Technochips/rms-bot/issues"
+  },
+  "homepage": "https://github.com/Technochips/rms-bot#readme",
+  "dependencies": {
+    "discord.js": "^11.1.0"
+  }
+}
