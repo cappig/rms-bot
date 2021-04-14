@@ -18,6 +18,7 @@
   "homepage": "https://github.com/Technochips/rms-bot#readme",
   "dependencies": {
     "discord.js": "^11.1.0",
-    "dotenv": "^8.2.0"
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1"
   }
 }
