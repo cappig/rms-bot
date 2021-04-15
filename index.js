@@ -15,8 +15,7 @@ client.on('ready', () =>
 
 client.on('message', message =>
 {
-	// If yu want to rrun this code just remove " && message.author.id != process.env.LID" its not needed for the bot
-	if(message.author.id != client.user.id && message.author.id != process.env.LID)
+	if(message.author.id != client.user.id)
 	{
 		if(includesArray(message.cleanContent, copypasta.doesntlike))
 		{
